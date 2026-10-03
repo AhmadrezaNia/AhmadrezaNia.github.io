@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ahmadrezania.github.io/sitemap.xml
