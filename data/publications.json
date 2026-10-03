@@ -1,138 +1,393 @@
 [
   {
-    "id": "clea", "year": 2026, "first": false,
+    "id": "clea",
+    "year": 2026,
+    "first": false,
     "title": "When the Cross-Silo Federation Goes Offline: Continual Learning for Site Onboarding with Limited Unlabeled Data",
     "authors": [],
-    "venue": "CLEA · NeurIPS 2026 Workshop", "status": "Accepted workshop paper",
-    "topic": "Continual & federated learning", "image": "clea.webp",
+    "venue": "CLEA · NeurIPS 2026 Workshop",
+    "status": "Accepted workshop paper",
+    "topic": "Continual & federated learning",
+    "image": "clea.webp",
     "alt": "Architecture of offline site onboarding with class-specific autoencoders, novelty detection, and model expansion",
     "summary": "Onboards a new site after a federation goes offline, using limited unlabeled data to discover unfamiliar classes and adapt the model while retaining existing knowledge.",
     "method": "Combines federated class-specific denoising autoencoders, reconstruction-based novelty detection, clustering, and selective classifier expansion. Compares local rehearsal, shared prototypes, and a combination of both.",
     "evaluation": "Evaluated on ultrasonic metal welding across five seeds. The dual-rehearsal variant achieves 88.9% mean accuracy on both old and new classes in the autonomous onboarding experiment. Results concern a controlled manufacturing study; prototype sharing and local rehearsal have different data-disclosure requirements.",
-    "links": [{"label": "Manuscript", "url": "assets/papers/clea-2026.pdf"}, {"label": "Workshop", "url": "https://clea-neurips.github.io/"}],
-    "feature": {"label": "Continual learning", "title": "Learning after the federation goes offline.", "description": "A new factory site arrives. Earlier sites are unavailable. Can a model learn unfamiliar faults from limited unlabeled data and still remember what it knows?", "result": "Offline onboarding · limited unlabeled data"}
+    "links": [
+      {
+        "label": "Manuscript",
+        "url": "assets/papers/clea-2026.pdf"
+      },
+      {
+        "label": "Workshop",
+        "url": "https://clea-neurips.github.io/"
+      }
+    ]
   },
   {
-    "id": "llm-adam", "year": 2026, "first": true,
+    "id": "llm-adam",
+    "year": 2026,
+    "first": true,
     "title": "LLM-ADAM: A Generalizable LLM Agent Framework for Pre-Print Anomaly Detection in Additive Manufacturing",
-    "authors": ["Ahmadreza Eslaminia", "Chuhan Cai", "Cameron Smith", "Ruo-Syuan Mei", "Shichen Li", "Rajiv Malhotra", "Klara Nahrstedt", "Chenhui Shao"],
-    "venue": "arXiv:2605.03328", "status": "Preprint", "topic": "LLM systems & evaluation", "image": "llm-adam.webp",
+    "authors": [
+      "Ahmadreza Eslaminia",
+      "Chuhan Cai",
+      "Cameron Smith",
+      "Ruo-Syuan Mei",
+      "Shichen Li",
+      "Rajiv Malhotra",
+      "Klara Nahrstedt",
+      "Chenhui Shao"
+    ],
+    "venue": "arXiv:2605.03328",
+    "status": "Preprint",
+    "topic": "LLM systems & evaluation",
+    "image": "llm-adam.webp",
     "alt": "LLM-ADAM workflow with Extractor, Reference, and Judge agents and deterministic Python analysis",
     "summary": "Turns machine instructions into evidence for defect diagnosis through specialized LLM agents and deterministic analysis.",
     "method": "An Extractor structures G-code parameters, a Reference agent grounds operating ranges in documentation, Python computes deviations, and a Judge diagnoses defects using the resulting evidence.",
     "evaluation": "The best configuration achieves 87.5% accuracy versus 59.5% for a single-LLM baseline on 200 G-code programs spanning two printers, two materials, and five classes. This is a controlled benchmark of program-level diagnosis, rather than an evaluation on an unrestricted production fleet.",
-    "links": [{"label": "Paper", "url": "https://arxiv.org/abs/2605.03328"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2605.03328"}],
-    "feature": {"label": "LLM agents", "title": "Giving LLM diagnosis an evidence trail.", "description": "Specialized agents extract machine settings, ground reference ranges in documentation, and reason over computed deviations to diagnose printing defects.", "result": "87.5% accuracy · 200-program evaluation"}
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2605.03328"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2605.03328"
+      }
+    ],
+    "feature": {
+      "label": "LLM agents",
+      "title": "Grounding LLM diagnosis in evidence.",
+      "description": "Specialized agents extract machine settings, ground reference ranges in documentation, and reason over computed deviations to diagnose printing defects.",
+      "result": "87.5% accuracy · 200-program evaluation"
+    }
   },
   {
-    "id": "adaptive-faults", "year": 2026, "first": true,
+    "id": "adaptive-faults",
+    "year": 2026,
+    "first": true,
     "title": "Adaptive unknown fault detection and few-shot continual learning for condition monitoring in ultrasonic metal welding",
-    "authors": ["Ahmadreza Eslaminia", "Kuan-Chieh Lu", "Klara Nahrstedt", "Chenhui Shao"],
-    "venue": "Machine Learning: Engineering · 2, 025011", "status": "Journal article", "topic": "Continual & federated learning", "image": "adaptive-faults.webp",
+    "authors": [
+      "Ahmadreza Eslaminia",
+      "Kuan-Chieh Lu",
+      "Klara Nahrstedt",
+      "Chenhui Shao"
+    ],
+    "venue": "Machine Learning: Engineering · 2, 025011",
+    "status": "Journal article",
+    "topic": "Continual & federated learning",
+    "image": "adaptive-faults.webp",
     "alt": "Open-set fault detection and few-shot continual learning pipeline for ultrasonic metal welding",
     "summary": "Detects faults outside a model’s known classes, groups unfamiliar examples, and learns new fault classes from a small labeled sample.",
     "method": "Builds class-specific acceptance regions in a learned embedding, uses clustering to support labeling, and updates selected classifier layers while freezing most parameters.",
     "evaluation": "Reports 96% unknown-fault detection accuracy and up to 98% overall classification accuracy after a five-sample update in the single-new-class experiment. Only 9.2% of model parameters are trained during adaptation. The study assumes a consistent underlying process and sensor configuration.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1088/3049-4761/aea420"}, {"label": "Preprint", "url": "https://arxiv.org/abs/2604.13465"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1088/3049-4761/aea420"
+      },
+      {
+        "label": "Preprint",
+        "url": "https://arxiv.org/abs/2604.13465"
+      }
+    ],
+    "feature": {
+      "label": "Continual learning",
+      "title": "Learning new faults from few examples.",
+      "description": "Detects faults beyond the known classes, groups unfamiliar examples, and adapts a classifier using a small labeled sample.",
+      "result": "Five-sample update · 9.2% of parameters adapted"
+    }
   },
   {
-    "id": "qos-qoe", "year": 2026, "first": false,
+    "id": "qos-qoe",
+    "year": 2026,
+    "first": false,
     "title": "QoS-QoE Translation with Large Language Model",
-    "authors": ["Yingjie Yu", "Mingyuan Wu", "Ahmadreza Eslaminia", "Lingzhi Zhao", "Kaizhuo Yan", "Klara Nahrstedt"],
-    "venue": "arXiv:2604.08703", "status": "Preprint", "topic": "LLM systems & evaluation", "image": "qos-qoe.webp",
+    "authors": [
+      "Yingjie Yu",
+      "Mingyuan Wu",
+      "Ahmadreza Eslaminia",
+      "Lingzhi Zhao",
+      "Kaizhuo Yan",
+      "Klara Nahrstedt"
+    ],
+    "venue": "arXiv:2604.08703",
+    "status": "Preprint",
+    "topic": "LLM systems & evaluation",
+    "image": "qos-qoe.webp",
     "alt": "Literature-grounded data pipeline linking quality of service and quality of experience",
     "summary": "Builds a source-grounded dataset of multimedia quality relationships and evaluates LLMs that translate between network performance and perceived user experience.",
     "method": "Combines literature curation, structured relationship extraction, iterative evaluation, and supervised fine-tuning for bidirectional QoS–QoE prediction.",
     "evaluation": "Includes 1,026 relationship records and 8,107 derived chat instances. Evaluates continuous values and discrete labels, retaining source evidence and context for each relationship.",
-    "links": [{"label": "Paper", "url": "https://arxiv.org/abs/2604.08703"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2604.08703"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2604.08703"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2604.08703"
+      }
+    ]
   },
   {
-    "id": "fdm-bench", "year": 2025, "first": true,
+    "id": "fdm-bench",
+    "year": 2025,
+    "first": true,
     "title": "FDM-bench: a domain-specific benchmark for evaluating large language models in additive manufacturing",
-    "authors": ["Ahmadreza Eslaminia", "Adrian Jackson", "Beitong Tian", "Avi Stern", "Hallie Gordon", "Rajiv Malhotra", "Klara Nahrstedt", "Chenhui Shao"],
-    "venue": "Manufacturing Letters · 44, 1415–1424", "status": "Journal article", "topic": "LLM systems & evaluation", "image": "fdm-bench.webp",
+    "authors": [
+      "Ahmadreza Eslaminia",
+      "Adrian Jackson",
+      "Beitong Tian",
+      "Avi Stern",
+      "Hallie Gordon",
+      "Rajiv Malhotra",
+      "Klara Nahrstedt",
+      "Chenhui Shao"
+    ],
+    "venue": "Manufacturing Letters · 44, 1415–1424",
+    "status": "Journal article",
+    "topic": "LLM systems & evaluation",
+    "image": "fdm-bench.webp",
     "alt": "Printed objects showing normal, under-extruded, over-extruded, and spaghetti defect classes",
     "summary": "Benchmarks LLM manufacturing knowledge and G-code interpretation against expert-reviewed questions and real printing outcomes.",
     "method": "Pairs 16 G-code programs and four printing classes with 30 free-response and 75 multiple-choice questions at three expertise levels. Fourteen domain experts review the evaluation material.",
     "evaluation": "Compares GPT-4o, Claude 3.5 Sonnet, and Llama models to expose gaps between general language competence and manufacturing-specific reasoning. The benchmark and evaluation code are public.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1016/j.mfglet.2025.06.161"}, {"label": "Code & benchmark", "url": "https://github.com/AhmadrezaNia/FDM-Bench"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1016/j.mfglet.2025.06.161"
+      },
+      {
+        "label": "Code & benchmark",
+        "url": "https://github.com/AhmadrezaNia/FDM-Bench"
+      }
+    ],
+    "feature": {
+      "label": "LLM evaluation",
+      "title": "Testing manufacturing reasoning.",
+      "description": "Expert-reviewed questions and physical printing outcomes test LLM technical knowledge, G-code interpretation, and defect diagnosis.",
+      "result": "14 domain experts · Public benchmark"
+    }
   },
   {
-    "id": "machine-stethoscope", "year": 2025, "first": false,
+    "id": "machine-stethoscope",
+    "year": 2025,
+    "first": false,
     "title": "MachineStethoscope: A Smart and Cost-effective Machine Health Monitoring System",
-    "authors": ["Beitong Tian", "Yaohui Wang", "Ahmadreza Eslaminia", "Ragini Gupta", "Robert Bruce Kaufman", "Leah Espenhahn", "Gianni Pezzarossi", "Mauro Sardela", "John Dallesasse", "Klara Nahrstedt"],
-    "venue": "IEEE MIPR · 323–329", "status": "Conference paper", "topic": "Edge ML & sensing", "image": "machine-stethoscope.webp",
+    "authors": [
+      "Beitong Tian",
+      "Yaohui Wang",
+      "Ahmadreza Eslaminia",
+      "Ragini Gupta",
+      "Robert Bruce Kaufman",
+      "Leah Espenhahn",
+      "Gianni Pezzarossi",
+      "Mauro Sardela",
+      "John Dallesasse",
+      "Klara Nahrstedt"
+    ],
+    "venue": "IEEE MIPR · 323–329",
+    "status": "Conference paper",
+    "topic": "Edge ML & sensing",
+    "image": "machine-stethoscope.webp",
     "alt": "MachineStethoscope edge data acquisition and compression-based anomaly detection architecture",
     "summary": "Uses inexpensive sensing and compression-based analysis to monitor equipment anomalies at the edge while reducing data storage and transmission.",
     "method": "Converts high-rate sensor signals to spectrogram sequences and uses video compression behavior to identify changes in temporal regularity.",
     "evaluation": "Evaluated on real laboratory vacuum pumps and controlled failure sequences. The study detects eight real pump anomaly events and reduces the size of transmitted data by over 90% in the evaluated setup.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1109/MIPR67560.2025.00058"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1109/MIPR67560.2025.00058"
+      }
+    ]
   },
   {
-    "id": "food-drying", "year": 2025, "first": false,
+    "id": "food-drying",
+    "year": 2025,
+    "first": false,
     "title": "Multi-Modal Zero-Shot Prediction of Color Trajectories in Food Drying",
-    "authors": ["Shichen Li", "Ahmadreza Eslaminia", "Chenhui Shao"],
-    "venue": "arXiv:2512.06190", "status": "Preprint", "topic": "Multimodal learning", "image": "food-drying.webp",
+    "authors": [
+      "Shichen Li",
+      "Ahmadreza Eslaminia",
+      "Chenhui Shao"
+    ],
+    "venue": "arXiv:2512.06190",
+    "status": "Preprint",
+    "topic": "Multimodal learning",
+    "image": "food-drying.webp",
     "alt": "Multimodal trajectory prediction architecture combining process parameters and initial food images",
     "summary": "Fuses initial images with process settings to predict full color-change trajectories under unseen drying conditions, without condition-specific fine-tuning.",
     "method": "Uses compact trajectory basis functions, image features, process parameters, and similarity-informed training-set selection.",
     "evaluation": "Validated on cookie and apple drying. For apples, the best multimodal configuration reaches RMSE 1.2865 versus 10.1517 for the reported baseline. Here, zero-shot refers to unseen combinations of drying conditions.",
-    "links": [{"label": "Paper", "url": "https://arxiv.org/abs/2512.06190"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2512.06190"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2512.06190"
+      },
+      {
+        "label": "PDF",
+        "url": "https://arxiv.org/pdf/2512.06190"
+      }
+    ]
   },
   {
-    "id": "fdg-cm", "year": 2024, "first": true,
+    "id": "fdg-cm",
+    "year": 2024,
+    "first": true,
     "title": "Federated domain generalization for condition monitoring in ultrasonic metal welding",
-    "authors": ["Ahmadreza Eslaminia", "Yuquan Meng", "Klara Nahrstedt", "Chenhui Shao"],
-    "venue": "Journal of Manufacturing Systems · 77, 1–12", "status": "Journal article", "topic": "Continual & federated learning", "image": "fdg-cm.webp",
+    "authors": [
+      "Ahmadreza Eslaminia",
+      "Yuquan Meng",
+      "Klara Nahrstedt",
+      "Chenhui Shao"
+    ],
+    "venue": "Journal of Manufacturing Systems · 77, 1–12",
+    "status": "Journal article",
+    "topic": "Continual & federated learning",
+    "image": "fdg-cm.webp",
     "alt": "Federated learning system with a shared feature extractor and task-specific condition-monitoring heads",
     "summary": "Learns shared representations and personalized tasks across manufacturing sites, improving condition monitoring on unseen domains without pooling raw sensor data.",
     "method": "Combines a shared base model, task-specific upper layers, group-wise aggregation, and regularization. Includes an edge–cloud implementation with Raspberry Pi clients and RabbitMQ.",
     "evaluation": "Reports gains of 5.35–8.08 percentage points over the compared federated baselines on unseen-domain tasks. The earlier FTL-TP preprint is a version of this same work, rather than a separate publication.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1016/j.jmsy.2024.09.023"}, {"label": "Code", "url": "https://github.com/AhmadrezaNia/FDG-CM"}, {"label": "Earlier preprint", "url": "https://arxiv.org/abs/2404.13278"}],
-    "feature": {"label": "Federated learning", "title": "Generalizing across manufacturing sites.", "description": "Shared representations and personalized heads learn across tasks and sites, with an edge–cloud implementation that keeps raw sensor data local.", "result": "5.35–8.08 percentage-point gains on unseen domains"}
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1016/j.jmsy.2024.09.023"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/AhmadrezaNia/FDG-CM"
+      },
+      {
+        "label": "Earlier preprint",
+        "url": "https://arxiv.org/abs/2404.13278"
+      }
+    ],
+    "feature": {
+      "label": "Federated learning",
+      "title": "Generalizing across manufacturing sites.",
+      "description": "Shared representations and personalized heads learn across tasks and sites, with an edge–cloud implementation that keeps raw sensor data local.",
+      "result": "5.35–8.08 percentage-point gains on unseen domains"
+    }
   },
   {
-    "id": "weldmon", "year": 2023, "first": false,
+    "id": "weldmon",
+    "year": 2023,
+    "first": false,
     "title": "WeldMon: A Cost-effective Ultrasonic Welding Machine Condition Monitoring System",
-    "authors": ["Beitong Tian", "Ahmadreza Eslaminia", "Kuan-Chieh Lu", "Yaohui Wang", "Chenhui Shao", "Klara Nahrstedt"],
-    "venue": "IEEE UEMCON · 0310–0319", "status": "Conference paper · Best Paper Award", "topic": "Edge ML & sensing", "image": "weldmon.webp",
+    "authors": [
+      "Beitong Tian",
+      "Ahmadreza Eslaminia",
+      "Kuan-Chieh Lu",
+      "Yaohui Wang",
+      "Chenhui Shao",
+      "Klara Nahrstedt"
+    ],
+    "venue": "IEEE UEMCON · 0310–0319",
+    "status": "Conference paper · Best Student Paper Award",
+    "topic": "Edge ML & sensing",
+    "image": "weldmon.webp",
     "alt": "WeldMon architecture and laboratory deployment on an ultrasonic welding machine",
     "summary": "Combines low-cost sensing, learned and engineered features, and data augmentation for autonomous welding-condition monitoring on a Raspberry Pi.",
     "method": "Uses an audio ADC for high-rate acquisition, converts multimodal signals to image-like inputs, and combines CNN features with signal features for classification.",
     "evaluation": "The evaluated system costs as little as $120. The hybrid pipeline averages approximately 385 ms per processing cycle on a Raspberry Pi 4; performance is evaluated across tool and surface-condition tasks.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1109/UEMCON59035.2023.10315983"}, {"label": "Preprint", "url": "https://arxiv.org/abs/2308.05756"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1109/UEMCON59035.2023.10315983"
+      },
+      {
+        "label": "Preprint",
+        "url": "https://arxiv.org/abs/2308.05756"
+      },
+      {
+        "label": "Award coverage",
+        "url": "https://mechse.illinois.edu/news/63860"
+      }
+    ]
   },
   {
-    "id": "grasp-dynamics", "year": 2022, "first": false,
+    "id": "grasp-dynamics",
+    "year": 2022,
+    "first": false,
     "title": "Classification of Activities of Daily Living Based on Grasp Dynamics Obtained from a Leap Motion Controller",
-    "authors": ["Hajar Sharif", "Ahmadreza Eslaminia", "Pramod Chembrammel", "Thenkurussi Kesavadas"],
-    "venue": "Sensors · 22(21), 8273", "status": "Journal article", "topic": "Human activity recognition", "image": "grasp-dynamics.webp",
+    "authors": [
+      "Hajar Sharif",
+      "Ahmadreza Eslaminia",
+      "Pramod Chembrammel",
+      "Thenkurussi Kesavadas"
+    ],
+    "venue": "Sensors · 22(21), 8273",
+    "status": "Journal article",
+    "topic": "Human activity recognition",
+    "image": "grasp-dynamics.webp",
     "alt": "Experimental setup for measuring hand grasp dynamics with a Leap Motion Controller",
     "summary": "Recognizes daily-living activities using three-dimensional hand motion and grasp dynamics captured by a Leap Motion Controller.",
     "method": "Transforms hand coordinates to remove gross movement, normalizes geometric features, and compares support vector machines with convolutional classifiers.",
     "evaluation": "Studies eight activities in eight healthy participants with five-fold cross-validation. The best reported activity-detection CNN reaches 99.88% accuracy and 97.3% macro recall; patient evaluation remains future work.",
-    "links": [{"label": "Paper & PDF", "url": "https://www.mdpi.com/1424-8220/22/21/8273"}]
+    "links": [
+      {
+        "label": "Paper & PDF",
+        "url": "https://www.mdpi.com/1424-8220/22/21/8273"
+      }
+    ]
   },
   {
-    "id": "imu-rehabilitation", "year": 2022, "first": false,
+    "id": "imu-rehabilitation",
+    "year": 2022,
+    "first": false,
     "title": "A new scheme for the development of IMU-based activity recognition systems for telerehabilitation",
-    "authors": ["Amin M. Nasrabadi", "Ahmad R. Eslaminia", "Parsa R. Bakhshayesh", "Mehdi Ejtehadi", "Laila Alibiglou", "Saeed Behzadipour"],
-    "venue": "Medical Engineering & Physics · 108, 103876", "status": "Journal article", "topic": "Human activity recognition", "image": "imu-rehabilitation.webp",
+    "authors": [
+      "Amin M. Nasrabadi",
+      "Ahmad R. Eslaminia",
+      "Parsa R. Bakhshayesh",
+      "Mehdi Ejtehadi",
+      "Laila Alibiglou",
+      "Saeed Behzadipour"
+    ],
+    "venue": "Medical Engineering & Physics · 108, 103876",
+    "status": "Journal article",
+    "topic": "Human activity recognition",
+    "image": "imu-rehabilitation.webp",
     "alt": "Wearable inertial sensors positioned on a participant for activity-recognition experiments",
     "summary": "Optimizes wearable sensor placement and signal features, then adapts activity-recognition models with a small amount of participant-specific data.",
     "method": "Uses genetic search over sensors and signals, time/frequency/wavelet features, dimensionality reduction, and several classifiers. Healthy-participant data support the initial design.",
     "evaluation": "Evaluates 34 activities using nine healthy participants and two participants with Parkinson’s disease. The small patient cohort establishes a preliminary adaptation study, rather than broad clinical validation.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1016/j.medengphy.2022.103876"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1016/j.medengphy.2022.103876"
+      }
+    ]
   },
   {
-    "id": "sensor-configuration", "year": 2019, "first": false,
+    "id": "sensor-configuration",
+    "year": 2019,
+    "first": false,
     "title": "Optimal Sensor Configuration for Activity Recognition during Whole-body Exercises",
-    "authors": ["Amin M. Nasrabadi", "Ahmad R. Eslaminia", "Amir M. Soufi Enayati", "Laila Alibiglou", "Saeed Behzadipour"],
-    "venue": "IEEE ICRoM · 512–518", "status": "Conference paper", "topic": "Human activity recognition", "image": "sensor-configuration.webp",
+    "authors": [
+      "Amin M. Nasrabadi",
+      "Ahmad R. Eslaminia",
+      "Amir M. Soufi Enayati",
+      "Laila Alibiglou",
+      "Saeed Behzadipour"
+    ],
+    "venue": "IEEE ICRoM · 512–518",
+    "status": "Conference paper",
+    "topic": "Human activity recognition",
+    "image": "sensor-configuration.webp",
     "alt": "Whole-body exercise examples used to evaluate inertial sensor configurations",
     "summary": "Searches sensor configurations and signal features for efficient recognition of whole-body rehabilitation exercises, with adaptation for new users.",
     "method": "Uses genetic optimization over wearable IMU configurations and engineered signal features with a nearest-mean classifier.",
     "evaluation": "Evaluates 34 activities in nine healthy participants. The work establishes the sensor-selection and adaptation approach developed further in the 2022 journal article.",
-    "links": [{"label": "Paper", "url": "https://doi.org/10.1109/ICRoM48714.2019.9071849"}]
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1109/ICRoM48714.2019.9071849"
+      }
+    ]
   }
 ]

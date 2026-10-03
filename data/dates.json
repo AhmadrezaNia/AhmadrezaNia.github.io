@@ -1,0 +1,14 @@
+{
+  "clea": {"display":"Dec 2026", "iso":"2026-12", "basis":"Scheduled workshop month; acceptance supplied by Aaron in October 2026", "source":"https://clea-neurips.github.io/"},
+  "adaptive-faults": {"display":"Sep 2026", "iso":"2026-09", "basis":"Published online September 22, 2026, in supplied final article", "source":"https://doi.org/10.1088/3049-4761/aea420"},
+  "llm-adam": {"display":"May 2026", "iso":"2026-05", "basis":"arXiv submission May 5, 2026", "source":"https://arxiv.org/abs/2605.03328"},
+  "qos-qoe": {"display":"Apr 2026", "iso":"2026-04", "basis":"arXiv submission April 9, 2026", "source":"https://arxiv.org/abs/2604.08703"},
+  "food-drying": {"display":"Dec 2025", "iso":"2025-12", "basis":"arXiv submission December 5, 2025", "source":"https://arxiv.org/abs/2512.06190"},
+  "fdm-bench": {"display":"Aug 2025", "iso":"2025-08", "basis":"Journal issue month from publisher Crossref metadata", "source":"https://doi.org/10.1016/j.mfglet.2025.06.161"},
+  "machine-stethoscope": {"display":"Aug 2025", "iso":"2025-08", "basis":"Conference August 6–8, 2025, from IEEE Crossref metadata", "source":"https://doi.org/10.1109/MIPR67560.2025.00058"},
+  "fdg-cm": {"display":"Dec 2024", "iso":"2024-12", "basis":"Journal issue month from publisher Crossref metadata", "source":"https://doi.org/10.1016/j.jmsy.2024.09.023"},
+  "weldmon": {"display":"Oct 2023", "iso":"2023-10", "basis":"Conference October 12–14, 2023, from IEEE Crossref metadata", "source":"https://doi.org/10.1109/UEMCON59035.2023.10315983"},
+  "grasp-dynamics": {"display":"Oct 2022", "iso":"2022-10", "basis":"Published October 28, 2022, from MDPI Crossref metadata", "source":"https://doi.org/10.3390/s22218273"},
+  "imu-rehabilitation": {"display":"Oct 2022", "iso":"2022-10", "basis":"Journal issue month from publisher Crossref metadata", "source":"https://doi.org/10.1016/j.medengphy.2022.103876"},
+  "sensor-configuration": {"display":"Nov 2019", "iso":"2019-11", "basis":"Conference November 20–21, 2019, from IEEE Crossref metadata", "source":"https://doi.org/10.1109/ICRoM48714.2019.9071849"}
+}
