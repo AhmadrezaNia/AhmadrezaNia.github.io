@@ -92,3 +92,10 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 - IndexNow uses a public key-verification file at the site root. indexnow.json and scripts/notify_search.py remain repository source files; only the root key file is deployed. Successful deployments notify participating search engines of the homepage update. A submission receipt is not confirmation of crawling, indexing, or ranking.
 - The GitHub profile website link and the repository homepage point to the primary portfolio. Add the same URL to LinkedIn and the Scholar profile's homepage field to make the identity consistent across public profiles.
 - Search appearance and timing are controlled by the search engines. Do not claim guaranteed first-place ranking or immediate indexing.
+
+## Name-search refinement
+
+- The search title prioritizes the exact name Ahmadreza Nia while retaining Aaron. The visible introduction uses the same full name, and the description includes the correctly spelled publication name Ahmadreza Eslaminia. Existing publication author names provide the visible context. The friendly main heading and page layout are retained.
+- Person metadata uses Ahmadreza Nia as the primary name and connects Aaron Nia and verified publication aliases to the same identity. No typo variants or hidden keyword text are added.
+- Google Scholar's public Homepage field now points to the main portfolio instead of ResearchGate. The publication name and other Scholar fields remain unchanged; its alternative-name field is reserved for names actually used on publications.
+- Search Console still reports the homepage as unknown to Google's index immediately after the initial indexing request. Avoid repeating requests in quick succession; report pending indexing accurately.
