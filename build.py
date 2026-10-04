@@ -1,5 +1,6 @@
 """Render the static portfolio with Python's standard library: python build.py."""
 import html
+import hashlib
 import json
 from pathlib import Path
 
@@ -23,17 +24,17 @@ def publication(p):
     links = p['links'] + p.get('resources', [])
     return f'''<article class="publication" id="paper-{p['id']}" data-first="{str(p['first']).lower()}" data-topic="{esc(p['topic'])}">
       <button class="paper-figure" type="button" data-figure="assets/figures/{p['image']}" data-caption="{esc(p['title'])}" aria-label="Enlarge figure from {esc(p['title'])}"><img src="assets/figures/{p['image']}" alt="{esc(p['alt'])}" loading="lazy" width="420" height="270"><span>View figure</span></button>
-      <div class="publication-body"><div class="paper-meta"><time datetime="{d['iso']}">{d['display']}</time>{first}</div>
-      <h3>{esc(p['title'])}</h3>{authors}<p class="venue">{esc(p['venue'])}<span class="paper-status">{esc(p['status'])}</span></p><p class="paper-summary">{esc(p['summary'])}</p>
+      <div class="publication-body"><div class="paper-meta"><time datetime="{d['iso']}">{d['display']}</time><span class="paper-status">{esc(p['status'])}</span>{first}</div>
+      <h3>{esc(p['title'])}</h3>{authors}<p class="venue">{esc(p['venue'])}</p><p class="paper-summary">{esc(p['summary'])}</p>
       <div class="paper-links">{''.join(link(x) for x in links)}</div>
-      <details><summary>Research details</summary><div class="paper-detail"><p><strong>Approach.</strong> {esc(p['method'])}</p><p><strong>Evaluation.</strong> {esc(p['evaluation'])}</p></div></details></div></article>'''
+      <details><summary>Method & results</summary><div class="paper-detail"><p><strong>Approach.</strong> {esc(p['method'])}</p><p><strong>Results.</strong> {esc(p['evaluation'])}</p></div></details></div></article>'''
 
 def featured(p):
     f = p['feature']
     resource_links = ''.join(link(x) for x in p.get('resources', []))
     return f'''<article class="research-card"><div class="card-top"><span class="project-name">{esc(f['label'])}</span><time datetime="{dates[p['id']]['iso']}">{dates[p['id']]['display']}</time></div>
     <h3>{esc(f['title'])}</h3><p class="research-description">{esc(f['description'])}</p>
-    <a class="research-image" href="#paper-{p['id']}" aria-label="Read the paper for {esc(f['label'])}"><img src="assets/figures/{p['image']}" alt="{esc(p['alt'])}" loading="lazy" width="600" height="320"></a>
+    <figure class="project-figure"><button class="research-image" type="button" data-figure="assets/figures/{p['image']}" data-caption="{esc(p['title'])}" aria-label="Enlarge {esc(f['label'])} research figure"><img src="assets/figures/{p['image']}" alt="{esc(p['alt'])}" loading="lazy" width="600" height="320"></button><figcaption>{esc(f['caption'])}</figcaption></figure>
     <p class="research-result">{esc(f['result'])}</p><div class="card-links"><a href="#paper-{p['id']}">Read paper</a>{resource_links}</div></article>'''
 
 groups = []
@@ -42,6 +43,9 @@ for year in sorted({p['year'] for p in papers}, reverse=True):
     groups.append(f'<div class="publication-year"><h3 class="year-heading">{year}</h3>'+''.join(publication(p) for p in group)+'</div>')
 highlights = sorted((p for p in papers if 'feature' in p), key=lambda p: p['feature']['order'])
 template = (ROOT / 'template.html').read_text(encoding='utf-8')
+for token, filename in (('STYLE_VERSION', 'styles.css'), ('SCRIPT_VERSION', 'script.js')):
+    version = hashlib.sha256((ROOT / filename).read_bytes()).hexdigest()[:12]
+    template = template.replace('{{' + token + '}}', version)
 template = template.replace('{{FEATURED}}', ''.join(featured(p) for p in highlights))
 template = template.replace('{{PUBLICATIONS}}', ''.join(groups))
 template = template.replace('{{COUNT}}', str(len(papers)))

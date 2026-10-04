@@ -3,7 +3,6 @@
   const root = document.documentElement;
   const themeButton = document.querySelector('.theme-toggle');
   const preference = matchMedia('(prefers-color-scheme: dark)');
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let saved = null;
   try { saved = localStorage.getItem('aaron-theme'); } catch (_) {}
   function applyTheme(theme) {
@@ -41,7 +40,12 @@
     for (const section of sections) {
       if (section.getBoundingClientRect().top <= 140) active = section.id;
     }
-    if (innerHeight + scrollY >= root.scrollHeight - 20) active = 'contact';
+    if (innerHeight + scrollY >= root.scrollHeight - 20) {
+      // At the bottom, short sections can share a viewport. Honor the visible link destination.
+      const destination = sections.find(section => location.hash === `#${section.id}`);
+      const top = destination?.getBoundingClientRect().top;
+      active = top >= 0 && top < innerHeight ? destination.id : 'connect';
+    }
     navLinks.forEach(link => {
       const selected = link.hash === `#${active}`;
       link.classList.toggle('active', selected);
@@ -92,21 +96,28 @@
     const target = document.getElementById(fragment);
     if (target?.classList.contains('publication') && target.hidden) {
       firstOnly = false; topic.value = 'all'; updateFilterButtons(); filterPapers();
-      target.scrollIntoView({behavior: reduceMotion.matches ? 'instant' : 'smooth'});
+      target.scrollIntoView({behavior: 'instant'});
     }
     requestUpdate();
   }
   addEventListener('hashchange', revealLinkedPaper); revealLinkedPaper();
-  // Preserve bookmarks to the previous service section.
-  if (location.hash === '#service') document.getElementById('recognition').scrollIntoView({behavior: 'instant'});
+  // Preserve bookmarks when section names change.
+  const legacyAnchors = {recognition: 'awards', service: 'awards', contact: 'connect'};
+  const legacyTarget = legacyAnchors[location.hash.slice(1)];
+  if (legacyTarget) document.getElementById(legacyTarget).scrollIntoView({behavior: 'instant'});
 
   const dialog = document.getElementById('figure-dialog');
   let opener = null;
-  document.querySelectorAll('[data-figure]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('[data-figure], [data-portrait]').forEach(button => button.addEventListener('click', () => {
     opener = button;
+    const portrait = Boolean(button.dataset.portrait);
     const image = document.getElementById('expanded-figure');
-    image.src = button.dataset.figure; image.alt = button.querySelector('img').alt;
-    document.getElementById('figure-caption').textContent = button.dataset.caption;
+    image.src = button.dataset.portrait || button.dataset.figure;
+    image.alt = button.querySelector('img').alt;
+    document.getElementById('figure-caption').textContent = portrait ? 'Aaron Nia' : button.dataset.caption;
+    document.getElementById('dialog-kind').textContent = portrait ? 'Portrait' : 'Research figure';
+    dialog.classList.toggle('portrait-dialog', portrait);
+    root.classList.add('image-dialog-open');
     dialog.showModal();
   }));
   document.getElementById('close-dialog').addEventListener('click', () => dialog.close());
@@ -115,5 +126,8 @@
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
   });
-  dialog.addEventListener('close', () => opener?.focus({preventScroll: true}));
+  dialog.addEventListener('close', () => {
+    root.classList.remove('image-dialog-open');
+    opener?.focus({preventScroll: true});
+  });
 })();

@@ -13,7 +13,7 @@ A responsive static portfolio for applied ML and research, hosted on GitHub Page
 - The Milwaukee Tool full-time position and internship are separate. Shared contributions reflect the source résumé's combined treatment of the roles.
 - Teaching and service include Aaron's supplied update: five undergraduate students mentored across three research projects.
 - Both résumé pages are rendered from the existing public PDF, with a direct PDF link. The previews work independently of embedded browser PDF support.
-- LinkedIn is the primary contact. Theme selection, keyboard focus indicators, a skip link, and native figure dialogs support different browsing needs. Smooth scrolling respects reduced-motion preferences.
+- LinkedIn is the primary contact. Theme selection, keyboard focus indicators, a skip link, and native figure dialogs support different browsing needs. Section navigation is immediate and keeps the active menu aligned with the destination.
 
 ## Updating
 
@@ -55,3 +55,16 @@ The supplied headshot is Aaron's profile photograph. The retained, unused `asset
 The Pages workflow publishes rendered HTML, CSS, JavaScript, and public assets. Build scripts and source data are not published as site routes; the repository itself is public. Push to `main` to deploy.
 
 Updates are curated on request. Keep local extracts, private code, credentials, development screenshots, and verification scripts outside this repository.
+
+## October 2026 refinement
+
+- Visible profile links label LinkedIn, Google Scholar, GitHub, and email. Larger circular portraits and original research figures open in a keyboard-accessible image dialog.
+- The publication treatment uses blue month dates and venue names, serif year headings, larger diagrams, and outlined resource links. The same accent and rules organize industry, education, teaching, and service.
+- The résumé preview is collapsed by default and includes both pages. Dark-theme previews use CSS inversion and blending for reading; the original PDF download remains unchanged.
+- Industry metrics come from the supplied Cisco résumé. That résumé groups internship and full-time contributions, so the engineering impact block covers Milwaukee Tool work collectively.
+- Technical expertise was expanded from the supplied résumé's programming, software, and methods. No private code or confidential reviewed manuscript titles are published.
+- Mentorship dates (Jan 2024–May 2026), two UIUC teaching semesters, and the undergraduate teaching end date (May 2020) are Aaron's updates. Fall semesters are displayed without inventing exact day dates. Mechanical Design I is an undergraduate course taught by a graduate teaching assistant, not a graduate-level course.
+- The mentoring outputs LLM-ADAM and FDM-Bench follow Aaron's update. The NCSA program title and link are verified at https://reu.ncsa.illinois.edu/.
+- Reviewing counts are 20 review rounds in Aaron's original record plus two completed reviews for Frontiers in Manufacturing Technology confirmed by Aaron. Journal counts total 15; conferences total 7; aggregate 22 reviews across 10 venues. Counts include repeat review rounds and are not presented as a number of unique manuscripts. The source résumé's older aggregate (26 papers) is not substituted for this itemized record.
+- MONET group affiliation is cross-linked to https://monet.cs.illinois.edu/. Prof. Klara Nahrstedt's Computer Science affiliation and Prof. Chenhui Shao's Mechanical Engineering affiliation are supported by their institutional faculty pages.
+- Old recognition, service, and contact bookmarks still navigate to Awards or Connect.

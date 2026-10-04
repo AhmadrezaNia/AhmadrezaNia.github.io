@@ -63,7 +63,8 @@
       "title": "LLM agents & tool use",
       "description": "An agent framework combining structured extraction, grounded references, and deterministic tools for evidence-based diagnosis.",
       "result": "87.5% accuracy across 200 evaluated programs",
-      "order": 1
+      "order": 1,
+      "caption": "Agent workflow: structured extraction, reference grounding, and tool-based analysis."
     },
     "resources": []
   },
@@ -101,7 +102,8 @@
       "title": "Continual learning & anomaly detection",
       "description": "Detecting unfamiliar classes and adapting a model from a few labeled examples while retaining existing knowledge.",
       "result": "Five-example adaptation · 9.2% of parameters updated",
-      "order": 3
+      "order": 3,
+      "caption": "Model pipeline: novelty detection and few-shot classifier adaptation."
     },
     "resources": []
   },
@@ -181,7 +183,8 @@
       "title": "LLM evaluation & benchmarking",
       "description": "An expert-reviewed benchmark testing language-model knowledge, reasoning, and program analysis against measurable outcomes.",
       "result": "14 domain experts · Public benchmark",
-      "order": 2
+      "order": 2,
+      "caption": "Benchmark samples: normal prints and representative defect classes."
     },
     "resources": [
       {
@@ -287,7 +290,8 @@
       "title": "Federated learning & generalization",
       "description": "Distributed learning with shared representations and personalized models, evaluated on data from previously unseen domains.",
       "result": "5.35–8.08 percentage-point gains on unseen domains",
-      "order": 4
+      "order": 4,
+      "caption": "Federated architecture: shared representations and task-specific model layers."
     },
     "resources": [
       {
