@@ -83,3 +83,12 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 - The industry summary and standalone deployment note are removed. Potential annual bill-of-materials savings retain the pending-deployment qualifier next to the metric.
 - The systems row has no bottom rule, leaving one divider before Teaching & mentoring. ME 451 states that Aaron taught classes on the software tools and their application.
 - The third selected research card now features the accepted CLEA NeurIPS 2026 workshop paper, with its original diagram, offline onboarding summary, workshop link, and scheduled December 2026 month. The continual learning and anomaly detection heading stays the same. The adaptive fault-learning journal article remains in the complete publication list.
+
+## Search discovery
+
+- The title, social previews, visible introduction, and structured identity data associate Aaron Nia with Ahmadreza Nia and the publication names already present on the site. The preferred site name is Aaron Nia. Person, WebSite, and ProfilePage metadata share stable identifiers and the root canonical URL.
+- The site renders all public content in HTML, allows crawling in robots.txt, and exposes its sitemap at https://ahmadrezania.github.io/sitemap.xml. Keep the sitemap's lastmod tied to substantive page changes. Do not add hash fragments as separate sitemap pages.
+- The Google ownership-verification meta tag must stay in template.html. Removing it could revoke verification in Search Console. Use the URL-prefix property https://ahmadrezania.github.io/ for sitemap submission and URL inspection.
+- IndexNow uses a public key-verification file at the site root. indexnow.json and scripts/notify_search.py remain repository source files; only the root key file is deployed. Successful deployments notify participating search engines of the homepage update. A submission receipt is not confirmation of crawling, indexing, or ranking.
+- The GitHub profile website link and the repository homepage point to the primary portfolio. Add the same URL to LinkedIn and the Scholar profile's homepage field to make the identity consistent across public profiles.
+- Search appearance and timing are controlled by the search engines. Do not claim guaranteed first-place ranking or immediate indexing.
