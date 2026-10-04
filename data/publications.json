@@ -23,7 +23,21 @@
         "url": "https://clea-neurips.github.io/"
       }
     ],
-    "resources": []
+    "resources": [],
+    "feature": {
+      "label": "Offline site onboarding",
+      "title": "Continual learning & anomaly detection",
+      "description": "Adapting models to a new site after a federation goes offline, using limited unlabeled data to discover unfamiliar classes while preserving prior knowledge.",
+      "result": "Accepted at CLEA · NeurIPS 2026 Workshop",
+      "order": 3,
+      "caption": "Offline onboarding: novelty detection, class discovery, and classifier expansion.",
+      "links": [
+        {
+          "label": "Workshop",
+          "url": "https://clea-neurips.github.io/"
+        }
+      ]
+    }
   },
   {
     "id": "llm-adam",
@@ -97,14 +111,6 @@
         "url": "https://arxiv.org/abs/2604.13465"
       }
     ],
-    "feature": {
-      "label": "Adaptive fault learning",
-      "title": "Continual learning & anomaly detection",
-      "description": "Detecting unfamiliar classes and adapting a model from a few labeled examples while retaining existing knowledge.",
-      "result": "Five-example adaptation · 9.2% of parameters updated",
-      "order": 3,
-      "caption": "Model pipeline: novelty detection and few-shot classifier adaptation."
-    },
     "resources": []
   },
   {

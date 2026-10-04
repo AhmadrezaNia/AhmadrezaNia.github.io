@@ -73,6 +73,13 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 
 - Profile links use one vertical list on desktop and mobile. Navigation and section headings both use Awards & service, and award rows share one visual treatment.
 - Advisor names retain Prof. and their departments, without university names. CSL, the Automation & Digital Manufacturing Lab, and the Health Care Engineering Systems Center link to Aaron's supplied official lab pages.
-- Both Milwaukee Tool appointments keep their dates and titles and share one employer summary and contribution list, reflecting Aaron's clarification that they are on the same team. Current confidential work is not described in further detail.
+- Both Milwaukee Tool appointments keep their dates and titles and share one contribution list, reflecting Aaron's clarification that they are on the same team. Current confidential work is not described in further detail.
 - Technical expertise emphasizes software and libraries documented in the supplied résumés, including SolidWorks and CATIA from the earlier résumé. One separate row covers systems and hardware.
 - LinkedIn's public index supports Milwaukee Tool and the UIUC education dates. The profile's detailed experience section is behind a sign-in wall, so exact role dates remain based on Aaron's supplied updates and résumé.
+
+## CLEA highlight and technology update
+
+- Aaron supplied Java, Abaqus, Fusion 360, and STM32 experience in the follow-up. STM32 microcontrollers appear in the shared Milwaukee Tool prototyping bullet and systems list; no specific device model is inferred. Product naming is checked against the official STMicroelectronics, SIMULIA, and Autodesk pages.
+- The industry summary and standalone deployment note are removed. Potential annual bill-of-materials savings retain the pending-deployment qualifier next to the metric.
+- The systems row has no bottom rule, leaving one divider before Teaching & mentoring. ME 451 states that Aaron taught classes on the software tools and their application.
+- The third selected research card now features the accepted CLEA NeurIPS 2026 workshop paper, with its original diagram, offline onboarding summary, workshop link, and scheduled December 2026 month. The continual learning and anomaly detection heading stays the same. The adaptive fault-learning journal article remains in the complete publication list.

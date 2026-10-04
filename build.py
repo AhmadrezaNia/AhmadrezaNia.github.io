@@ -31,7 +31,7 @@ def publication(p):
 
 def featured(p):
     f = p['feature']
-    resource_links = ''.join(link(x) for x in p.get('resources', []))
+    resource_links = ''.join(link(x) for x in p.get('resources', []) + f.get('links', []))
     return f'''<article class="research-card"><div class="card-top"><span class="project-name">{esc(f['label'])}</span><time datetime="{dates[p['id']]['iso']}">{dates[p['id']]['display']}</time></div>
     <h3>{esc(f['title'])}</h3><p class="research-description">{esc(f['description'])}</p>
     <figure class="project-figure"><button class="research-image" type="button" data-figure="assets/figures/{p['image']}" data-caption="{esc(p['title'])}" aria-label="Enlarge {esc(f['label'])} research figure"><img src="assets/figures/{p['image']}" alt="{esc(p['alt'])}" loading="lazy" width="600" height="320"></button><figcaption>{esc(f['caption'])}</figcaption></figure>
