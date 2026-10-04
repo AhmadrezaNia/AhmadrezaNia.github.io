@@ -22,7 +22,8 @@
         "label": "Workshop",
         "url": "https://clea-neurips.github.io/"
       }
-    ]
+    ],
+    "resources": []
   },
   {
     "id": "llm-adam",
@@ -39,14 +40,14 @@
       "Klara Nahrstedt",
       "Chenhui Shao"
     ],
-    "venue": "arXiv:2605.03328",
+    "venue": "arXiv",
     "status": "Preprint",
     "topic": "LLM systems & evaluation",
     "image": "llm-adam.webp",
     "alt": "LLM-ADAM workflow with Extractor, Reference, and Judge agents and deterministic Python analysis",
     "summary": "Turns machine instructions into evidence for defect diagnosis through specialized LLM agents and deterministic analysis.",
     "method": "An Extractor structures G-code parameters, a Reference agent grounds operating ranges in documentation, Python computes deviations, and a Judge diagnoses defects using the resulting evidence.",
-    "evaluation": "The best configuration achieves 87.5% accuracy versus 59.5% for a single-LLM baseline on 200 G-code programs spanning two printers, two materials, and five classes. This is a controlled benchmark of program-level diagnosis, rather than an evaluation on an unrestricted production fleet.",
+    "evaluation": "The best configuration achieves 87.5% accuracy versus 59.5% for a single-LLM baseline on 200 G-code programs spanning two printers, two materials, and five classes. The reported results cover controlled program-level diagnosis.",
     "links": [
       {
         "label": "Paper",
@@ -58,11 +59,13 @@
       }
     ],
     "feature": {
-      "label": "LLM agents",
-      "title": "Grounding LLM diagnosis in evidence.",
-      "description": "Specialized agents extract machine settings, ground reference ranges in documentation, and reason over computed deviations to diagnose printing defects.",
-      "result": "87.5% accuracy · 200-program evaluation"
-    }
+      "label": "LLM-ADAM",
+      "title": "LLM agents & tool use",
+      "description": "An agent framework combining structured extraction, grounded references, and deterministic tools for evidence-based diagnosis.",
+      "result": "87.5% accuracy across 200 evaluated programs",
+      "order": 1
+    },
+    "resources": []
   },
   {
     "id": "adaptive-faults",
@@ -75,7 +78,7 @@
       "Klara Nahrstedt",
       "Chenhui Shao"
     ],
-    "venue": "Machine Learning: Engineering · 2, 025011",
+    "venue": "Machine Learning: Engineering",
     "status": "Journal article",
     "topic": "Continual & federated learning",
     "image": "adaptive-faults.webp",
@@ -94,11 +97,13 @@
       }
     ],
     "feature": {
-      "label": "Continual learning",
-      "title": "Learning new faults from few examples.",
-      "description": "Detects faults beyond the known classes, groups unfamiliar examples, and adapts a classifier using a small labeled sample.",
-      "result": "Five-sample update · 9.2% of parameters adapted"
-    }
+      "label": "Adaptive fault learning",
+      "title": "Continual learning & anomaly detection",
+      "description": "Detecting unfamiliar classes and adapting a model from a few labeled examples while retaining existing knowledge.",
+      "result": "Five-example adaptation · 9.2% of parameters updated",
+      "order": 3
+    },
+    "resources": []
   },
   {
     "id": "qos-qoe",
@@ -113,7 +118,7 @@
       "Kaizhuo Yan",
       "Klara Nahrstedt"
     ],
-    "venue": "arXiv:2604.08703",
+    "venue": "arXiv",
     "status": "Preprint",
     "topic": "LLM systems & evaluation",
     "image": "qos-qoe.webp",
@@ -129,6 +134,16 @@
       {
         "label": "PDF",
         "url": "https://arxiv.org/pdf/2604.08703"
+      }
+    ],
+    "resources": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/yyu6969/qos-qoe-translation"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://drive.google.com/file/d/1vvyhoRU6q14A5hmoux8G1j288eGlf2YB/view"
       }
     ]
   },
@@ -147,7 +162,7 @@
       "Klara Nahrstedt",
       "Chenhui Shao"
     ],
-    "venue": "Manufacturing Letters · 44, 1415–1424",
+    "venue": "Manufacturing Letters",
     "status": "Journal article",
     "topic": "LLM systems & evaluation",
     "image": "fdm-bench.webp",
@@ -159,18 +174,21 @@
       {
         "label": "Paper",
         "url": "https://doi.org/10.1016/j.mfglet.2025.06.161"
-      },
-      {
-        "label": "Code & benchmark",
-        "url": "https://github.com/AhmadrezaNia/FDM-Bench"
       }
     ],
     "feature": {
-      "label": "LLM evaluation",
-      "title": "Testing manufacturing reasoning.",
-      "description": "Expert-reviewed questions and physical printing outcomes test LLM technical knowledge, G-code interpretation, and defect diagnosis.",
-      "result": "14 domain experts · Public benchmark"
-    }
+      "label": "FDM-Bench",
+      "title": "LLM evaluation & benchmarking",
+      "description": "An expert-reviewed benchmark testing language-model knowledge, reasoning, and program analysis against measurable outcomes.",
+      "result": "14 domain experts · Public benchmark",
+      "order": 2
+    },
+    "resources": [
+      {
+        "label": "GitHub · benchmark & data",
+        "url": "https://github.com/AhmadrezaNia/FDM-Bench"
+      }
+    ]
   },
   {
     "id": "machine-stethoscope",
@@ -189,7 +207,7 @@
       "John Dallesasse",
       "Klara Nahrstedt"
     ],
-    "venue": "IEEE MIPR · 323–329",
+    "venue": "IEEE MIPR",
     "status": "Conference paper",
     "topic": "Edge ML & sensing",
     "image": "machine-stethoscope.webp",
@@ -202,7 +220,8 @@
         "label": "Paper",
         "url": "https://doi.org/10.1109/MIPR67560.2025.00058"
       }
-    ]
+    ],
+    "resources": []
   },
   {
     "id": "food-drying",
@@ -214,7 +233,7 @@
       "Ahmadreza Eslaminia",
       "Chenhui Shao"
     ],
-    "venue": "arXiv:2512.06190",
+    "venue": "arXiv",
     "status": "Preprint",
     "topic": "Multimodal learning",
     "image": "food-drying.webp",
@@ -231,7 +250,8 @@
         "label": "PDF",
         "url": "https://arxiv.org/pdf/2512.06190"
       }
-    ]
+    ],
+    "resources": []
   },
   {
     "id": "fdg-cm",
@@ -244,22 +264,18 @@
       "Klara Nahrstedt",
       "Chenhui Shao"
     ],
-    "venue": "Journal of Manufacturing Systems · 77, 1–12",
+    "venue": "Journal of Manufacturing Systems",
     "status": "Journal article",
     "topic": "Continual & federated learning",
     "image": "fdg-cm.webp",
     "alt": "Federated learning system with a shared feature extractor and task-specific condition-monitoring heads",
     "summary": "Learns shared representations and personalized tasks across manufacturing sites, improving condition monitoring on unseen domains without pooling raw sensor data.",
     "method": "Combines a shared base model, task-specific upper layers, group-wise aggregation, and regularization. Includes an edge–cloud implementation with Raspberry Pi clients and RabbitMQ.",
-    "evaluation": "Reports gains of 5.35–8.08 percentage points over the compared federated baselines on unseen-domain tasks. The earlier FTL-TP preprint is a version of this same work, rather than a separate publication.",
+    "evaluation": "Reports gains of 5.35–8.08 percentage points over the compared federated baselines on unseen-domain tasks. FTL-TP is the earlier preprint of this work.",
     "links": [
       {
         "label": "Paper",
         "url": "https://doi.org/10.1016/j.jmsy.2024.09.023"
-      },
-      {
-        "label": "Code",
-        "url": "https://github.com/AhmadrezaNia/FDG-CM"
       },
       {
         "label": "Earlier preprint",
@@ -267,11 +283,18 @@
       }
     ],
     "feature": {
-      "label": "Federated learning",
-      "title": "Generalizing across manufacturing sites.",
-      "description": "Shared representations and personalized heads learn across tasks and sites, with an edge–cloud implementation that keeps raw sensor data local.",
-      "result": "5.35–8.08 percentage-point gains on unseen domains"
-    }
+      "label": "FDG-CM",
+      "title": "Federated learning & generalization",
+      "description": "Distributed learning with shared representations and personalized models, evaluated on data from previously unseen domains.",
+      "result": "5.35–8.08 percentage-point gains on unseen domains",
+      "order": 4
+    },
+    "resources": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/AhmadrezaNia/FDG-CM"
+      }
+    ]
   },
   {
     "id": "weldmon",
@@ -286,7 +309,7 @@
       "Chenhui Shao",
       "Klara Nahrstedt"
     ],
-    "venue": "IEEE UEMCON · 0310–0319",
+    "venue": "IEEE UEMCON",
     "status": "Conference paper · Best Student Paper Award",
     "topic": "Edge ML & sensing",
     "image": "weldmon.webp",
@@ -307,6 +330,12 @@
         "label": "Award coverage",
         "url": "https://mechse.illinois.edu/news/63860"
       }
+    ],
+    "resources": [
+      {
+        "label": "Project GitHub",
+        "url": "https://github.com/beitong95/WeldMon_Public"
+      }
     ]
   },
   {
@@ -320,7 +349,7 @@
       "Pramod Chembrammel",
       "Thenkurussi Kesavadas"
     ],
-    "venue": "Sensors · 22(21), 8273",
+    "venue": "Sensors",
     "status": "Journal article",
     "topic": "Human activity recognition",
     "image": "grasp-dynamics.webp",
@@ -333,7 +362,8 @@
         "label": "Paper & PDF",
         "url": "https://www.mdpi.com/1424-8220/22/21/8273"
       }
-    ]
+    ],
+    "resources": []
   },
   {
     "id": "imu-rehabilitation",
@@ -348,20 +378,21 @@
       "Laila Alibiglou",
       "Saeed Behzadipour"
     ],
-    "venue": "Medical Engineering & Physics · 108, 103876",
+    "venue": "Medical Engineering & Physics",
     "status": "Journal article",
     "topic": "Human activity recognition",
     "image": "imu-rehabilitation.webp",
     "alt": "Wearable inertial sensors positioned on a participant for activity-recognition experiments",
     "summary": "Optimizes wearable sensor placement and signal features, then adapts activity-recognition models with a small amount of participant-specific data.",
     "method": "Uses genetic search over sensors and signals, time/frequency/wavelet features, dimensionality reduction, and several classifiers. Healthy-participant data support the initial design.",
-    "evaluation": "Evaluates 34 activities using nine healthy participants and two participants with Parkinson’s disease. The small patient cohort establishes a preliminary adaptation study, rather than broad clinical validation.",
+    "evaluation": "Evaluates 34 activities using nine healthy participants and two participants with Parkinson’s disease. The small patient cohort supports a preliminary adaptation study.",
     "links": [
       {
         "label": "Paper",
         "url": "https://doi.org/10.1016/j.medengphy.2022.103876"
       }
-    ]
+    ],
+    "resources": []
   },
   {
     "id": "sensor-configuration",
@@ -375,7 +406,7 @@
       "Laila Alibiglou",
       "Saeed Behzadipour"
     ],
-    "venue": "IEEE ICRoM · 512–518",
+    "venue": "IEEE ICRoM",
     "status": "Conference paper",
     "topic": "Human activity recognition",
     "image": "sensor-configuration.webp",
@@ -388,6 +419,7 @@
         "label": "Paper",
         "url": "https://doi.org/10.1109/ICRoM48714.2019.9071849"
       }
-    ]
+    ],
+    "resources": []
   }
 ]
