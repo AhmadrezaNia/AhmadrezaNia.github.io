@@ -51,7 +51,7 @@ svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width:
 .profile-name:hover { text-decoration: none; }
 .profile-role { font-size: .9375rem; line-height: 1.65; color: var(--muted); margin-bottom: 12px; }
 .profile-role span { display: block; color: var(--faint); }
-.profile-links { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 8px; }
+.profile-links { display: grid; grid-template-columns: 1fr; gap: 2px; }
 .profile-links a { display: flex; align-items: center; gap: 7px; min-height: 32px; color: var(--accent); font-size: .875rem; line-height: 1.5; }
 .profile-links a:hover { color: var(--accent); }
 .profile-links svg { width: 18px; height: 18px; flex-shrink: 0; }
@@ -146,7 +146,7 @@ summary { font-size: .9375rem; font-weight: 500; color: var(--accent); padding: 
 .employer-heading > span { font-size: .9375rem; color: var(--faint); }
 .industry-roles { display: grid; }
 .industry-role { display: grid; grid-template-columns: 168px minmax(0,1fr); gap: 5px 26px; padding: 23px 0; border-bottom: 1px solid var(--line); }
-.industry-role time { grid-row: 1 / span 3; font-size: .9375rem; color: var(--faint); line-height: 1.7; }
+.industry-role time { grid-row: 1 / span 2; font-size: .9375rem; color: var(--faint); line-height: 1.7; }
 .industry-role h4 { grid-column: 2; font-size: 1.1875rem; }
 .industry-role .role-label { grid-column: 2; color: var(--accent); font-size: .875rem; }
 .industry-role p { grid-column: 2; font-size: 1.0625rem; line-height: 1.65; color: var(--muted); margin: 6px 0 0; }
@@ -244,7 +244,8 @@ dialog p { font-size: .9375rem; line-height: 1.7; max-width: 850px; margin: 18px
   main { padding-top: 24px; }
   .portrait-mobile { display: block; width: 128px; height: 128px; border: 0; padding: 0; background: none; border-radius: 50%; overflow: hidden; margin-bottom: 27px; }
   .portrait-mobile img { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .mobile-profile-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 25px; }
+  .mobile-profile-links { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-top: 25px; }
+  .mobile-profile-links a { min-height: 36px; font-size: .9375rem; }
   .introduction h1 { font-size: 3rem; }
   .section, .publication { scroll-margin-top: 0; }
   .research-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 39px 29px; }
@@ -253,7 +254,7 @@ dialog p { font-size: .9375rem; line-height: 1.7; max-width: 850px; margin: 18px
   .publication { grid-template-columns: 185px minmax(0,1fr); gap: 27px; }
   .paper-figure { height: 165px; }
   .industry-role, .experience-item, .teaching-list article { grid-template-columns: 168px minmax(0,1fr); gap: 26px; }
-  .industry-role time { grid-row: 1 / span 3; }
+  .industry-role time { grid-row: 1 / span 2; }
   .industry-role h4, .industry-role .role-label, .industry-role p { grid-column: 2; }
 }
 @media (max-width: 600px) {
@@ -327,7 +328,6 @@ dialog p { font-size: .9375rem; line-height: 1.7; max-width: 850px; margin: 18px
 .teaching-list li { padding-left: 3px; margin-bottom: 9px; }
 .course-code { display: inline-block; font-size: .875rem; font-weight: 400; color: var(--accent); margin-left: 7px; white-space: nowrap; }
 .teaching-list .program-name { color: var(--faint); font-size: .9375rem !important; line-height: 1.7; margin-top: 14px; }
-.featured-award { background: var(--soft); padding: 24px 20px !important; border-radius: 6px; border-bottom: 0 !important; }
 .award-venue { color: var(--accent) !important; font-weight: 500; }
 .review-service { margin-top: 46px; }
 .review-service .subsection-heading h3 { font-size: 1.5rem; color: var(--accent); }
@@ -352,4 +352,18 @@ dialog p { font-size: .9375rem; line-height: 1.7; max-width: 850px; margin: 18px
 @media (max-width: 1120px) { .degree-row { flex-direction: column; gap: 12px; } .degree-row time { text-align: left; } }
 @media (max-width: 930px) { .impact-grid { grid-template-columns: 1fr; gap: 22px; } }
 @media (max-width: 820px) { .profile .profile-links { display: none; } .mobile-profile-links { display: flex; } .impact-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
-@media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr; } .group-title { font-size: 1.4rem; } .review-summary { gap: 16px; } .review-summary dt { font-size: 1.7rem; } .review-summary dd { font-size: .875rem; } .featured-award { padding: 21px 17px !important; } .resume-disclosure > summary { gap: 10px; } .resume-page-count { flex-basis: 100%; margin-left: 23px; } .resume-pages figure { padding: 12px; } }
+@media (max-width: 600px) { .impact-grid { grid-template-columns: 1fr; } .group-title { font-size: 1.4rem; } .review-summary { gap: 16px; } .review-summary dt { font-size: 1.7rem; } .review-summary dd { font-size: .875rem; } .resume-disclosure > summary { gap: 10px; } .resume-page-count { flex-basis: 100%; margin-left: 23px; } .resume-pages figure { padding: 12px; } }
+
+/* Shared employer context and a software-first toolkit. */
+.employer-summary { color: var(--muted); font-size: 1.0625rem; line-height: 1.7; margin-bottom: 8px; }
+.impact-context { color: var(--faint); font-size: .9375rem; line-height: 1.7; margin: 0 0 20px; }
+.systems-expertise { grid-column: 1 / -1; }
+@media (min-width: 821px) and (max-height: 800px) {
+  .profile-name { margin-top: 12px; }
+  .profile-role { line-height: 1.5; margin-bottom: 9px; }
+  .profile-links { gap: 1px; }
+  .profile-links a { min-height: 28px; }
+  .site-nav { margin-top: 12px; }
+  .site-nav a { min-height: 30px; padding: 3px 0; }
+  .sidebar-bottom { margin-top: 8px; }
+}

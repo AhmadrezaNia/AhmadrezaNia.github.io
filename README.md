@@ -61,10 +61,18 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 - Visible profile links label LinkedIn, Google Scholar, GitHub, and email. Larger circular portraits and original research figures open in a keyboard-accessible image dialog.
 - The publication treatment uses blue month dates and venue names, serif year headings, larger diagrams, and outlined resource links. The same accent and rules organize industry, education, teaching, and service.
 - The résumé preview is collapsed by default and includes both pages. Dark-theme previews use CSS inversion and blending for reading; the original PDF download remains unchanged.
-- Industry metrics come from the supplied Cisco résumé. That résumé groups internship and full-time contributions, so the engineering impact block covers Milwaukee Tool work collectively.
+- Industry metrics originate in the supplied Cisco résumé, which groups internship and full-time contributions. Aaron clarified on October 4, 2026 that the $1M+ annual bill-of-materials saving is potential and the cost-saving opportunity has not yet been deployed. The site labels the metric accordingly and describes microcontroller work as prototyping and on-tool demonstrations.
 - Technical expertise was expanded from the supplied résumé's programming, software, and methods. No private code or confidential reviewed manuscript titles are published.
 - Mentorship dates (Jan 2024–May 2026), two UIUC teaching semesters, and the undergraduate teaching end date (May 2020) are Aaron's updates. Fall semesters are displayed without inventing exact day dates. Mechanical Design I is an undergraduate course taught by a graduate teaching assistant, not a graduate-level course.
 - The mentoring outputs LLM-ADAM and FDM-Bench follow Aaron's update. The NCSA program title and link are verified at https://reu.ncsa.illinois.edu/.
 - Reviewing counts are 20 review rounds in Aaron's original record plus two completed reviews for Frontiers in Manufacturing Technology confirmed by Aaron. Journal counts total 15; conferences total 7; aggregate 22 reviews across 10 venues. Counts include repeat review rounds and are not presented as a number of unique manuscripts. The source résumé's older aggregate (26 papers) is not substituted for this itemized record.
 - MONET group affiliation is cross-linked to https://monet.cs.illinois.edu/. Prof. Klara Nahrstedt's Computer Science affiliation and Prof. Chenhui Shao's Mechanical Engineering affiliation are supported by their institutional faculty pages.
 - Old recognition, service, and contact bookmarks still navigate to Awards or Connect.
+
+## October 4 follow-up
+
+- Profile links use one vertical list on desktop and mobile. Navigation and section headings both use Awards & service, and award rows share one visual treatment.
+- Advisor names retain Prof. and their departments, without university names. CSL, the Automation & Digital Manufacturing Lab, and the Health Care Engineering Systems Center link to Aaron's supplied official lab pages.
+- Both Milwaukee Tool appointments keep their dates and titles and share one employer summary and contribution list, reflecting Aaron's clarification that they are on the same team. Current confidential work is not described in further detail.
+- Technical expertise emphasizes software and libraries documented in the supplied résumés, including SolidWorks and CATIA from the earlier résumé. One separate row covers systems and hardware.
+- LinkedIn's public index supports Milwaukee Tool and the UIUC education dates. The profile's detailed experience section is behind a sign-in wall, so exact role dates remain based on Aaron's supplied updates and résumé.

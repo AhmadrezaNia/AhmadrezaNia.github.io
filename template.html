@@ -43,7 +43,7 @@
       <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
       <a href="#teaching">Teaching & mentoring</a>
-      <a href="#awards">Awards</a>
+      <a href="#awards">Awards & service</a>
       <a href="#cv">Résumé</a>
       <a href="#connect">Connect</a>
     </nav>
@@ -57,7 +57,7 @@
       <p class="intro-lead">I build machine learning systems, from research to deployment.</p>
       <p>I’m a <strong>Machine Learning Engineer at Milwaukee Tool</strong> and a final-year PhD candidate at the <strong>University of Illinois Urbana-Champaign</strong>. My work spans custom ML model development, continual and federated learning, LLM systems and evaluation, and efficient deployment.</p>
       <p>I work across algorithm design, model evaluation, sensor and time-series data, and embedded inference, connecting research ideas with working systems.</p>
-      <p class="advisors">At UIUC, I’m advised by <a href="https://siebelschool.illinois.edu/about/people/faculty/klara" target="_blank" rel="noopener noreferrer">Prof. Klara Nahrstedt</a> (Computer Science, UIUC) and <a href="https://me.engin.umich.edu/people/faculty/chenhui-shao/" target="_blank" rel="noopener noreferrer">Prof. Chenhui Shao</a> (Mechanical Engineering, University of Michigan).</p>
+      <p class="advisors">I’m advised by <a href="https://siebelschool.illinois.edu/about/people/faculty/klara" target="_blank" rel="noopener noreferrer">Prof. Klara Nahrstedt</a> (Computer Science) and <a href="https://me.engin.umich.edu/people/faculty/chenhui-shao/" target="_blank" rel="noopener noreferrer">Prof. Chenhui Shao</a> (Mechanical Engineering).</p>
       <div class="profile-links mobile-profile-links">
         <a href="https://www.linkedin.com/in/ar-nia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg><span>LinkedIn</span></a>
         <a href="https://scholar.google.com/citations?user=Gnpq2JgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m2 9 10-6 10 6-10 6zM6 12v6c4 3 8 3 12 0v-6M22 9v9"/></svg><span>Google Scholar</span></a>
@@ -101,21 +101,23 @@
       <div class="section-heading"><div><p class="eyebrow">Industry & research</p><h2 id="experience-title">Experience</h2></div></div>
       <div class="experience-group"><h3 class="group-title">Industry experience</h3>
         <div class="employer-block"><div class="employer-heading"><h4>Milwaukee Tool</h4><span>Brookfield, Wisconsin</span></div>
+          <p class="employer-summary">Machine learning engineering for sensor-based event detection, custom model development, and efficient on-device inference in power-tool systems. I returned full-time to the same team after my summer internship.</p>
           <div class="industry-roles">
-            <article class="industry-role"><time datetime="2026-05">May 2026 — Present</time><h4>Machine Learning Engineer</h4><span class="role-label">Full-time · Embedded ML & connected systems</span><p>Developing ML models and sensor-data pipelines for power-tool systems, with an emphasis on on-device inference, compute and memory constraints, and connected-device data collection.</p></article>
-            <article class="industry-role"><time datetime="2025-05">May 2025 — Aug 2025</time><h4>Machine Learning Engineer Intern</h4><span class="role-label">Internship · Applied ML engineering</span><p>Worked on sensor-based event detection, combining time-series feature engineering, model evaluation, and embedded deployment with practical on-tool testing.</p></article>
+            <article class="industry-role"><time datetime="2026-05">May 2026 — Present</time><h4>Machine Learning Engineer</h4><span class="role-label">Full-time</span></article>
+            <article class="industry-role"><time datetime="2025-05">May 2025 — Aug 2025</time><h4>Machine Learning Engineer Intern</h4><span class="role-label">Internship</span></article>
           </div>
-          <div class="shared-contributions"><h4>Engineering impact</h4>
-            <dl class="impact-grid"><div><dt>$1M+</dt><dd>Annual bill-of-materials cost savings</dd></div><div><dt>~90%</dt><dd>Reduction in inference computation</dd></div><div><dt>100%</dt><dd>Unsafe-event recall · 4% false-alarm rate in evaluation</dd></div></dl>
-            <ul><li>Built an end-to-end unsafe-event detection pipeline, from sensor preprocessing and feature selection to Python and XGBoost benchmarking on Azure.</li><li>Optimized features and quantized models for embedded C++ inference under strict latency and memory constraints, with negligible performance loss in the evaluated implementation.</li><li>Deployed models on microcontrollers and delivered live, on-tool demonstrations for cross-functional engineering teams.</li><li>Evaluated wireless connectivity and data throughput to inform infrastructure and data-collection decisions for connected jobsite devices.</li></ul>
+          <div class="shared-contributions"><h4>Selected engineering work</h4>
+            <dl class="impact-grid"><div><dt>$1M+</dt><dd>Potential annual bill-of-materials cost savings</dd></div><div><dt>~90%</dt><dd>Reduction in inference computation in evaluation</dd></div><div><dt>100%</dt><dd>Unsafe-event recall · 4% false-alarm rate in evaluation</dd></div></dl>
+            <p class="impact-context">Prototype evaluation results; the cost-saving solution is pending production deployment.</p>
+            <ul><li>Built an end-to-end unsafe-event detection pipeline, from sensor preprocessing and feature selection to Python and XGBoost benchmarking on Azure.</li><li>Optimized features and quantized models for embedded C++ inference under strict latency and memory constraints, with negligible performance loss in the evaluated implementation.</li><li>Prototyped model inference on microcontrollers and delivered live, on-tool demonstrations for cross-functional engineering teams.</li><li>Evaluated wireless connectivity and data throughput to inform infrastructure and data-collection decisions for connected jobsite devices.</li></ul>
           </div>
         </div>
       </div>
       <div class="experience-group"><h3 class="group-title">Research experience</h3>
         <div class="experience-list">
-          <article class="experience-item"><div class="timeline-date">Jun 2022 — Present</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · CSL & <a href="https://monet.cs.illinois.edu/" target="_blank" rel="noopener noreferrer">MONET Research Group</a></h4><p>Developing federated and continual learning methods, expert-reviewed LLM benchmarks, and tool-using agent systems. Research spans model generalization, data-efficient adaptation, and edge–cloud implementation.</p></div></article>
-          <article class="experience-item"><div class="timeline-date">May 2022 — Aug 2023</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · Automation & Digital Manufacturing Lab</h4><p>Developed an edge ML pipeline for ultrasonic welding condition monitoring, combining signal processing, learned features, and data augmentation to address dataset shift.</p></div></article>
-          <article class="experience-item"><div class="timeline-date">Jun 2021 — Nov 2022</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · Health Care Engineering Systems Center</h4><p>Built SVM and CNN activity-recognition models from hand-motion sensing and spatiotemporal features for daily-living and rehabilitation research.</p></div></article>
+          <article class="experience-item"><div class="timeline-date">Jun 2022 — Present</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · <a href="https://csl.illinois.edu/" target="_blank" rel="noopener noreferrer">CSL</a> & <a href="https://monet.cs.illinois.edu/" target="_blank" rel="noopener noreferrer">MONET Research Group</a></h4><p>Developing federated and continual learning methods, expert-reviewed LLM benchmarks, and tool-using agent systems. Research spans model generalization, data-efficient adaptation, and edge–cloud implementation.</p></div></article>
+          <article class="experience-item"><div class="timeline-date">May 2022 — Aug 2023</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · <a href="https://shaolab.mechse.illinois.edu/" target="_blank" rel="noopener noreferrer">Automation & Digital Manufacturing Lab</a></h4><p>Developed an edge ML pipeline for ultrasonic welding condition monitoring, combining signal processing, learned features, and data augmentation to address dataset shift.</p></div></article>
+          <article class="experience-item"><div class="timeline-date">Jun 2021 — Nov 2022</div><div><p class="organization">University of Illinois Urbana-Champaign</p><h4>Research Assistant · <a href="https://healtheng.illinois.edu/" target="_blank" rel="noopener noreferrer">Health Care Engineering Systems Center</a></h4><p>Built SVM and CNN activity-recognition models from hand-motion sensing and spatiotemporal features for daily-living and rehabilitation research.</p></div></article>
         </div>
       </div>
       <div class="experience-group education"><h3 class="group-title">Education</h3>
@@ -126,12 +128,13 @@
         <article class="education-institution"><h4>Sharif University of Technology</h4><div class="degree-row"><div><h5>BS · Mechanical Engineering</h5><p class="degree-meta">GPA 3.72 / 4.00</p></div><time datetime="2015-08">Aug 2015 — Aug 2020</time></div></article>
       </div>
       <div class="experience-group toolkit"><h3 class="group-title">Technical expertise</h3><dl class="expertise-grid">
-        <div><dt>ML models & algorithms</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn, XGBoost; deep learning, continual and federated learning, anomaly detection</dd></div>
-        <div><dt>LLM systems & evaluation</dt><dd>Multi-agent workflows, structured extraction, reference grounding, tool-based analysis, expert-reviewed benchmarks</dd></div>
-        <div><dt>Data & signal analysis</dt><dd>Python, NumPy, pandas, SQL, Spark, R, MATLAB; feature engineering, time-series analysis, signal processing</dd></div>
-        <div><dt>Embedded inference</dt><dd>C++, TensorFlow Lite, quantization, microcontrollers, Raspberry Pi, Arduino</dd></div>
-        <div><dt>Cloud & connected systems</dt><dd>Azure, MQTT, RabbitMQ, Pika, Node-RED; IoT data acquisition and edge–cloud pipelines</dd></div>
-        <div><dt>Software & research tools</dt><dd>Git, Docker, Linux, Grafana, OpenCV, Seaborn; data annotation, reproducible evaluation, high-performance computing</dd></div>
+        <div><dt>Programming languages</dt><dd>Python, C++, SQL, R, MATLAB</dd></div>
+        <div><dt>Machine learning libraries</dt><dd>PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, TensorFlow Lite</dd></div>
+        <div><dt>Data, vision & visualization</dt><dd>NumPy, pandas, Spark, OpenCV, Seaborn, Grafana</dd></div>
+        <div><dt>Cloud & development tools</dt><dd>Azure, Git, Docker, Linux</dd></div>
+        <div><dt>Messaging & integration</dt><dd>MQTT, RabbitMQ, Pika, Node-RED</dd></div>
+        <div><dt>Engineering software</dt><dd>SolidWorks, CATIA</dd></div>
+        <div class="systems-expertise"><dt>Systems & hardware</dt><dd>Embedded inference, model quantization, IoT and edge–cloud systems; microcontrollers, Raspberry Pi, Arduino</dd></div>
       </dl></div>
     </section>
 
@@ -147,10 +150,10 @@
     </section>
 
     <section id="awards" class="section" aria-labelledby="awards-title">
-      <div class="section-heading"><div><p class="eyebrow">Honors & academic service</p><h2 id="awards-title">Awards</h2></div></div>
+      <div class="section-heading"><div><p class="eyebrow">Honors & academic service</p><h2 id="awards-title">Awards & service</h2></div></div>
       <ol class="award-list">
         <li><time datetime="2025-07">Jul 2025</time><div><h3>NSF Travel Grant</h3><p>53rd North American Manufacturing Research Conference</p></div></li>
-        <li class="featured-award"><time datetime="2023-10">Oct 2023</time><div><h3>Best Student Paper Award</h3><p class="award-venue">IEEE UEMCON 2023</p><p><a href="#paper-weldmon">WeldMon: cost-effective ultrasonic welding condition monitoring</a></p><a class="text-link" href="https://mechse.illinois.edu/news/63860" target="_blank" rel="noopener noreferrer">Illinois MechSE award coverage</a></div></li>
+        <li><time datetime="2023-10">Oct 2023</time><div><h3>Best Student Paper Award</h3><p class="award-venue">IEEE UEMCON 2023</p><p><a href="#paper-weldmon">WeldMon: cost-effective ultrasonic welding condition monitoring</a></p><a class="text-link" href="https://mechse.illinois.edu/news/63860" target="_blank" rel="noopener noreferrer">Illinois MechSE award coverage</a></div></li>
         <li><time datetime="2021-05">May 2021</time><div><h3>UIUC Doctoral Fellowship</h3><p>University of Illinois Urbana-Champaign</p></div></li>
         <li><time datetime="2019-02">Feb 2019</time><div><h3>First-place team · Tanabar Competition</h3><p>Led a team to first place in the national student competition.</p></div></li>
       </ol>
