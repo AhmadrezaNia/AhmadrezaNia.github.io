@@ -99,3 +99,9 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 - Person metadata uses Ahmadreza Nia as the primary name and connects Aaron Nia and verified publication aliases to the same identity. No typo variants or hidden keyword text are added.
 - Google Scholar's public Homepage field now points to the main portfolio instead of ResearchGate. The publication name and other Scholar fields remain unchanged; its alternative-name field is reserved for names actually used on publications.
 - Search Console still reports the homepage as unknown to Google's index immediately after the initial indexing request. Avoid repeating requests in quick succession; report pending indexing accurately.
+
+## Name variants and sidebar
+
+- Person structured data now includes Aaron Nia, Ahmadreza Eslaminia, Ahmad R. Eslaminia, Ahmad Nia, and Ahmad Eslaminia alongside the primary Ahmadreza Nia. The page title remains concise. Search engines decide when to index and display the page.
+- The sidebar separates Machine Learning Engineer at Milwaukee Tool from PhD Candidate and Researcher at UIUC. Mobile retains the compact navigation bar and visible introduction.
+- The sitemap modification date reflects this substantive October 15, 2026 update.
