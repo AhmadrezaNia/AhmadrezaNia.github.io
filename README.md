@@ -103,5 +103,10 @@ Updates are curated on request. Keep local extracts, private code, credentials, 
 ## Name variants and sidebar
 
 - Person structured data now includes Aaron Nia, Ahmadreza Eslaminia, Ahmad R. Eslaminia, Ahmad Nia, and Ahmad Eslaminia alongside the primary Ahmadreza Nia. The page title remains concise. Search engines decide when to index and display the page.
-- The sidebar separates Machine Learning Engineer at Milwaukee Tool from PhD Candidate and Researcher at UIUC. Mobile retains the compact navigation bar and visible introduction.
+- The sidebar separates the Milwaukee Tool role from the UIUC doctoral research affiliation. Mobile retains the compact navigation bar and visible introduction.
 - The sitemap modification date reflects this substantive October 15, 2026 update.
+
+## November 2026 PhD update
+
+- Aaron reported passing his PhD defense on November 10, 2026 and asked the site to identify him as holding a PhD. The sidebar, introduction, news, education, metadata, sitemap, and footer reflect that update.
+- The linked résumé PDF and preview images are older assets supplied before the defense; replace them when Aaron provides an updated résumé.
